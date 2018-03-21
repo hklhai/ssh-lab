@@ -5,6 +5,7 @@ import com.lmax.disruptor.YieldingWaitStrategy;
 import com.lmax.disruptor.dsl.Disruptor;
 import com.lmax.disruptor.dsl.ProducerType;
 
+import java.nio.ByteBuffer;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -49,7 +50,7 @@ public class LogEventMain {
         Disruptor<LongEvent> disruptor = new Disruptor<LongEvent>(longEventFactory,
                 ringBufferSize, executorService, ProducerType.SINGLE, new YieldingWaitStrategy());
 
-       	// 连接消费事件方法
+        // 连接消费事件方法
         disruptor.handleEventsWith(new LongEventHandler());
 
         // 启动
@@ -60,6 +61,16 @@ public class LogEventMain {
         // 发布事件
         RingBuffer<LongEvent> ringBuffer = disruptor.getRingBuffer();
         // 自定义实现生产者
+//        LogEventProductor productor = new LogEventProductor(ringBuffer);
+        LongEventProducerWithTranslator productor = new LongEventProducerWithTranslator(ringBuffer);
+        ByteBuffer byteBuffer = ByteBuffer.allocate(8);
+        for (int i = 0; i < 100; i++) {
+            byteBuffer.putLong(0, i);
+            productor.onData(byteBuffer);
+        }
+        disruptor.shutdown();
+        executorService.shutdown();
+
 
     }
 }
