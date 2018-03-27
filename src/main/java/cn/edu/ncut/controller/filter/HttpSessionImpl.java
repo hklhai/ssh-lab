@@ -1,6 +1,6 @@
 package cn.edu.ncut.controller.filter;
 
-import lyy.redis.JedisAPI;
+import redis.JedisAPI;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.*;

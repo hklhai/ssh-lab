@@ -624,7 +624,7 @@
                       <webApp>
                           <contextPath>/sshlab</contextPath>
                       </webApp>
-                      <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
+                      <connector implementation="org.eclipse.jetty.server.net.nio.SelectChannelConnector">
                           <port>8080</port>
                           <maxIdelTime>60000</maxIdelTime>
                       </connector>

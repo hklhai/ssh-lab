@@ -1,4 +1,4 @@
-package wml.classinit.test;
+package classinit.test;
 
 import org.junit.Test;
 

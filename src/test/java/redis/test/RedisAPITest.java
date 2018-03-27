@@ -1,12 +1,4 @@
-package lyy.redis.test;
-
-import lyy.redis.JedisAPI;
-import org.junit.Assert;
-import org.junit.Test;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+package redis.test;
 
 /**
  * Created by lh on 2017/4/21.
