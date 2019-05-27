@@ -5,29 +5,29 @@ import cn.edu.ncut.dao.UserDao;
 import cn.edu.ncut.webservice.base.BaseParameters;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import cn.edu.ncut.model.base.BaseModel;
 
 
 public class BaseServiceImpl<T> implements BaseService {
 
-	private final static Logger logger = Logger.getLogger(BaseServiceImpl.class);
-	protected String xml;
-	protected BaseParameters<T> parameters = new BaseParameters<T>();
+    private final static Logger logger = Logger.getLogger(BaseServiceImpl.class);
+    protected String xml;
+    protected BaseParameters<T> parameters = new BaseParameters<T>();
 
-	@Autowired
-	private UserDao userDao;
+    @Autowired
+    private UserDao userDao;
 //	@Autowired
 //	private ModelDao modelDao;
-	
 
-	public boolean initXml(String xml) {
-		this.xml = xml;
-		initParams();
-		if (this.parameters.getModelId() == null || this.parameters.getModelId().equals("")) {
-			return true;
-		}
 
-		//TODO 权限关闭
+    @Override
+    public boolean initXml(String xml) {
+        this.xml = xml;
+        initParams();
+        if (this.parameters.getModelId() == null || this.parameters.getModelId().equals("")) {
+            return true;
+        }
+
+        //TODO 权限关闭
 //		List<ModelObj> list = this.getMyModelList();
 //		boolean contains = false;
 //		if (list != null) {
@@ -39,8 +39,8 @@ public class BaseServiceImpl<T> implements BaseService {
 //			}
 //		}
 //		return contains;
-		return true;
-	}
+        return true;
+    }
 
 //	public List<ModelObj> getMyModelList() {
 //		Map<String, Object> params = new HashMap<String, Object>();
@@ -80,23 +80,23 @@ public class BaseServiceImpl<T> implements BaseService {
 //		}
 //	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see cn.edu.ncut.isbn.service.base.BaseService#getXml()
-	 */
-	public String getXml() {
-		return this.xml;
-	}
+    /*
+     * (non-Javadoc)
+     *
+     * @see cn.edu.ncut.isbn.service.base.BaseService#getXml()
+     */
+    public String getXml() {
+        return this.xml;
+    }
 
-	@SuppressWarnings("unchecked")
-	protected void initParams() {
-		try {
-			parameters = (BaseParameters<T>) parameters.fromXML(xml);
-		} catch (Exception e) {
-			logger.error(e);
-		}
-	}
+    @SuppressWarnings("unchecked")
+    protected void initParams() {
+        try {
+            parameters = (BaseParameters<T>) parameters.fromXML(xml);
+        } catch (Exception e) {
+            logger.error(e);
+        }
+    }
 
 
 }
