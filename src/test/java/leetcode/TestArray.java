@@ -16,5 +16,17 @@ public class TestArray {
             System.out.println(b[i]);
         }
 
+
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("a").append("bcd");
+        System.out.println(sb.charAt(2));
+
+        StringBuilder sb2 = new StringBuilder();
+
+        if (sb2.toString().equals("")) {
+            System.out.println(a);
+        }
+
     }
 }
