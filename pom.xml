@@ -34,31 +34,31 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
-        <repository>
-            <id>Nexus</id>
-            <name>Nexus Repository</name>
-            <url>http://abbNexus.com:8081/nexus/content/groups/public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
+        <!--<repository>-->
+            <!--<id>Nexus</id>-->
+            <!--<name>Nexus Repository</name>-->
+            <!--<url>http://abbNexus.com:8081/nexus/content/groups/public/</url>-->
+            <!--<releases>-->
+                <!--<enabled>true</enabled>-->
+            <!--</releases>-->
+            <!--<snapshots>-->
+                <!--<enabled>true</enabled>-->
+            <!--</snapshots>-->
+        <!--</repository>-->
     </repositories>
 
-    <distributionManagement>
-        <repository>
-            <id>abbRelease</id>
-            <name>Abb Project Release</name>
-            <url>http://abbNexus.com:8081/nexus/content/repositories/releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>abbSnapshot</id>
-            <name>Abb Project Snapshot</name>
-            <url>http://abbNexus.com:8081/nexus/content/repositories/snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
+    <!--<distributionManagement>-->
+        <!--<repository>-->
+            <!--<id>abbRelease</id>-->
+            <!--<name>Abb Project Release</name>-->
+            <!--<url>http://abbNexus.com:8081/nexus/content/repositories/releases/</url>-->
+        <!--</repository>-->
+        <!--<snapshotRepository>-->
+            <!--<id>abbSnapshot</id>-->
+            <!--<name>Abb Project Snapshot</name>-->
+            <!--<url>http://abbNexus.com:8081/nexus/content/repositories/snapshots/</url>-->
+        <!--</snapshotRepository>-->
+    <!--</distributionManagement>-->
 
 
     <dependencies>
@@ -544,11 +544,11 @@
             <artifactId>jsoup</artifactId>
             <version>1.9.2</version>
         </dependency>
-        <dependency>
-            <groupId>com.rapid</groupId>
-            <artifactId>com-rapid</artifactId>
-            <version>1.0</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.rapid</groupId>-->
+            <!--<artifactId>com-rapid</artifactId>-->
+            <!--<version>1.0</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>com.jousp</groupId>
             <artifactId>jsoup</artifactId>
