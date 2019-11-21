@@ -1,19 +1,19 @@
 package cn.edu.ncut.test;
 
-import cn.edu.ncut.common.util.FileUtils;
-import cn.edu.ncut.model.RankObj;
-import net.sf.json.JSONObject;
-//import org.jsoup.Jsoup;
-//import org.jsoup.nodes.Document;
-//import org.jsoup.nodes.Element;
-//import org.jsoup.select.Elements;
-//import org.junit.Test;
-
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+//import cn.edu.ncut.common.util.FileUtils;
+//import cn.edu.ncut.model.RankObj;
+//import net.sf.json.JSONObject;
+////import org.jsoup.Jsoup;
+////import org.jsoup.nodes.Document;
+////import org.jsoup.nodes.Element;
+////import org.jsoup.select.Elements;
+////import org.junit.Test;
+//
+//import java.io.IOException;
+//import java.text.SimpleDateFormat;
+//import java.util.ArrayList;
+//import java.util.Date;
+//import java.util.List;
 
 public class TestJsoup extends Thread {
 
