@@ -19,31 +19,26 @@ import org.junit.Test;
 public class TestHelloWorld {
 
 
-    @Test
     public void testHello() {
         Factory<SecurityManager> factory = new IniSecurityManagerFactory("classpath:shiro.ini");
         loginFunction(factory, "zhang", "123");
     }
 
-    @Test
     public void testCustomRealm() {
         Factory<SecurityManager> factory = new IniSecurityManagerFactory("classpath:shiro-realm.ini");
         loginFunction(factory, "zhang", "123");
     }
 
-    @Test
     public void testCustomMultiRealm() {
         Factory<SecurityManager> factory = new IniSecurityManagerFactory("classpath:shiro-multi-realm.ini");
         loginFunction(factory, "wang", "123");
     }
 
-    @Test
     public void testJDBCRealm() {
         Factory<SecurityManager> factory = new IniSecurityManagerFactory("classpath:shiro-jdbc-realm.ini");
         loginFunction(factory, "zhang", "123");
     }
 
-    @Test
     public void testAllSuccessfulStrategyWithSuccess() {
         Factory<SecurityManager> factory = new IniSecurityManagerFactory("classpath:shiro-authenticator-all-success.ini");
         loginFunction(factory, "zhang", "123");
@@ -71,7 +66,6 @@ public class TestHelloWorld {
 
     }
 
-    @After
     public void tearDown() throws Exception {
         ThreadContext.unbindSubject();//退出时请解除绑定Subject到线程 否则对下次测试造成影响
     }
