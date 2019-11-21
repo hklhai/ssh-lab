@@ -10,7 +10,6 @@ import org.junit.Test;
  */
 public class PasswordRetryTest extends BaseTest {
 
-    @Test
     public void testRetryLimitHashedCredentialsMatcherWithMyRealm() {
         for (int i = 1; i <= 6; i++) {
             try {

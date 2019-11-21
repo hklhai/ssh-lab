@@ -14,7 +14,6 @@ import java.security.Key;
  */
 public class EncodeAndDecodeTest {
 
-    @Test
     public void testAES() {
         //AES 算法实现：
         AesCipherService aesCipherService = new AesCipherService();
@@ -30,7 +29,6 @@ public class EncodeAndDecodeTest {
         Assert.assertEquals(text, text2);
     }
 
-    @Test
     public void testBlowfishCipherService() {
         //Blowfish 算法实现：
         BlowfishCipherService blowfishCipherService = new BlowfishCipherService();
@@ -50,7 +48,6 @@ public class EncodeAndDecodeTest {
         junit.framework.Assert.assertEquals(text, text2);
     }
 
-    @Test
     public void testDefaultBlockCipherService() throws Exception {
         //对称加密，使用Java的JCA（javax.crypto.Cipher）加密API，常见的如 'AES', 'Blowfish'
         DefaultBlockCipherService cipherService = new DefaultBlockCipherService("AES");

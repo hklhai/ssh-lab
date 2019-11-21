@@ -16,7 +16,6 @@ import org.junit.Test;
  */
 public class TestBase64And16 {
 
-    @Test
     public void testBase64() {
         String str = "hello";
         String base64Encoded = Base64.encodeToString(str.getBytes());
@@ -26,7 +25,6 @@ public class TestBase64And16 {
 
     }
 
-    @Test
     public void test16() {
         String str = "hello";
         String hexEncoded = Hex.encodeToString(str.getBytes());
@@ -36,7 +34,6 @@ public class TestBase64And16 {
     }
 
     //类CodecSupport，提供了toBytes(str, "utf-8") / toString(bytes,"utf-8")用于在byte 数组/String 之间转换。
-    @Test
     public void testCodecSupport() {
         String str = "hello";
         byte[] bytes = CodecSupport.toBytes(str, "utf-8");
@@ -45,7 +42,6 @@ public class TestBase64And16 {
         System.out.println(s);
     }
 
-    @Test
     public void testHash() {
         String str = "admin";
         String salt = "admin" + "12346";  //Name+ID
@@ -68,7 +64,6 @@ public class TestBase64And16 {
         System.out.println(simpleHash);
     }
 
-    @Test
     public void tesHashService() {
         DefaultHashService hashService = new DefaultHashService(); //默认算法SHA-512
         hashService.setHashAlgorithmName("SHA-512");

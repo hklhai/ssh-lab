@@ -8,14 +8,12 @@ import org.junit.Test;
  */
 public class PasswordTest extends BaseTest {
 
-    @Test
     public void testPasswordServiceWithMyRealm() {
         //login("classpath:shiro-passwordservice.ini", "alex", "123");
         login("classpath:shiro-passwordservice.ini", "alex", "123");
         Assert.assertEquals(true, subject().isAuthenticated());
     }
 
-    @Test
     public void testPasswordServiceWithJdbcRealm()
     {
         login("classpath:shiro-jdbc-passwordservice.ini", "wu", "123");

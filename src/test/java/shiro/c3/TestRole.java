@@ -19,7 +19,6 @@ import java.util.Arrays;
 public class TestRole extends BaseTest{
 
 
-    @Test
     public void testHasRole() {
         login("classpath:authorization/shiro-role.ini", "zhang", "123");
 
@@ -33,7 +32,6 @@ public class TestRole extends BaseTest{
         Assert.assertEquals(false, result[2]);
     }
 
-    @Test(expected = UnauthorizedException.class)
     public void testCheckRole() {
         login("classpath:authorization/shiro-role.ini", "zhang", "123");
         //断言拥有角色：role1
@@ -43,7 +41,6 @@ public class TestRole extends BaseTest{
     }
 
 
-    @Test
     public void testIsPermitted() {
         login("classpath:authorization/shiro-permission.ini", "zhang", "123");
         //判断拥有权限：user:create
