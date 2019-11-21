@@ -14,7 +14,7 @@ import org.junit.Test;
  */
 public class TestAuthenticator {
 
-    @Test
+    // @Test
     public void testLoginAndLogout() {
         Factory<SecurityManager> factory = new IniSecurityManagerFactory("classpath:shiro.ini");
         SecurityManager securityManager = factory.getInstance();

@@ -14,7 +14,7 @@ import org.junit.Test;
  */
 public class TestRealm {
 
-    @Test
+    // @Test
     public void testRealm() {
         Factory<SecurityManager> factory = new IniSecurityManagerFactory("classpath:shiro-realm.ini");
         SecurityManager securityManager = factory.getInstance();

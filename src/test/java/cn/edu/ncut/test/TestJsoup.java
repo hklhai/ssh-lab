@@ -51,7 +51,7 @@ public class TestJsoup extends Thread {
         t1.start();
     }
 
-    @Test
+//    @Test
     public void saveAuthor() throws IOException {
         List<RankObj> rankObjList = anlysisHTMLByURL();
         for (int i = 0; i < rankObjList.size(); i++) {

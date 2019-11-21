@@ -26,40 +26,40 @@ public class JdbcTest {
     JdbcPool pool = DBManager.getInstance();
     PooledConnection connection = null;
 
-    @Before
-    public void before() {
-        pool.init();
-
-    }
-
-    @Test
-    public void testJdbc() throws Exception {
-        connection = pool.getConnection();
-        ResultSet resultSet = connection.queryFromSQL("select * from tb_user");
-       // System.out.print("线程名：" + Thread.class.getName());
-        if (resultSet.next()) {
-            System.out.println(resultSet.getString("name"));
-        }
-        resultSet.close();
-        connection.close();
-    }
-
-    @Test
-    public void threadTest() {
-        for (int i = 0; i < 10; i++) {
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        testJdbc();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-            }).start();
-
-        }
-
-    }
+//    @Before
+//    public void before() {
+//        pool.init();
+//
+//    }
+//
+//    @Test
+//    public void testJdbc() throws Exception {
+//        connection = pool.getConnection();
+//        ResultSet resultSet = connection.queryFromSQL("select * from tb_user");
+//       // System.out.print("线程名：" + Thread.class.getName());
+//        if (resultSet.next()) {
+//            System.out.println(resultSet.getString("name"));
+//        }
+//        resultSet.close();
+//        connection.close();
+//    }
+//
+//    @Test
+//    public void threadTest() {
+//        for (int i = 0; i < 10; i++) {
+//            new Thread(new Runnable() {
+//                @Override
+//                public void run() {
+//                    try {
+//                        testJdbc();
+//                    } catch (Exception e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+//            }).start();
+//
+//        }
+//
+//    }
 
 }

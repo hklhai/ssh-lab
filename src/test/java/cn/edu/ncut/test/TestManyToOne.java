@@ -17,8 +17,8 @@ import javax.annotation.Resource;
  * Created by Ocean Lin on 2017/5/10.
  */
 
-@ContextConfiguration(locations = "classpath:spring/applicationContext.xml")
-@RunWith(SpringJUnit4ClassRunner.class)
+//@ContextConfiguration(locations = "classpath:spring/applicationContext.xml")
+//@RunWith(SpringJUnit4ClassRunner.class)
 public class TestManyToOne {
 
 
@@ -35,11 +35,11 @@ public class TestManyToOne {
 
 
 
-    @Test
-    public void testUpdatePubMap() {
-        PubMap map = new PubMap(1001, "c1", "c2", "c3");
-        userService.updatePubMap(map);
-    }
+//    @Test
+//    public void testUpdatePubMap() {
+//        PubMap map = new PubMap(1001, "c1", "c2", "c3");
+//        userService.updatePubMap(map);
+//    }
 
     @Test
     public void testSaveModel() {

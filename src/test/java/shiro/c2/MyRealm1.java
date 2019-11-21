@@ -19,12 +19,14 @@ public class MyRealm1 implements Realm {
 
     @Override
     public AuthenticationInfo getAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
-        String principal = (String) authenticationToken.getPrincipal();
-        Object credentials = new String((char[]) authenticationToken.getCredentials());
-        if (!"zhang".equals(principal))
-            throw new UnknownAccountException();
-        if (!"123".equals(credentials))
-            throw new IncorrectCredentialsException();
-        return new SimpleAuthenticationInfo(principal, credentials, getName());
+//        String principal = (String) authenticationToken.getPrincipal();
+//        Object credentials = new String((char[]) authenticationToken.getCredentials());
+//        if (!"zhang".equals(principal))
+//            throw new UnknownAccountException();
+//        if (!"123".equals(credentials))
+//            throw new IncorrectCredentialsException();
+//        return new SimpleAuthenticationInfo(principal, credentials, getName());
+
+        return null;
     }
 }
