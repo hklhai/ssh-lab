@@ -16,10 +16,10 @@ public class SelectSort {
     private static int[] selectSort(int[] arr) {
         int length = arr.length;
         int minIndex;
-        for (int i = 0; i < length - 1; i++) {
+        for (int i = 0; i < length - 1; i++) { // 依次插入0 到 n-1 位置的值
             // 当前值暂时作为最小索引
             minIndex = i;
-            for (int j = i; j < length; j++) {
+            for (int j = i + 1; j < length; j++) {
                 if (arr[j] < arr[minIndex]) {
                     minIndex = j;
                 }

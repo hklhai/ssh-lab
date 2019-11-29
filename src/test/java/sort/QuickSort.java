@@ -17,8 +17,9 @@ public class QuickSort {
             return arr;
         }
         // 为下面计算方便
-        int i = l - 1, j = r + 1;
         int mid = arr[l + r >> 1];
+
+        int i = l - 1, j = r + 1;
         while (i < j) {
             do i++; while (arr[i] < mid);
             do j--; while (arr[j] > mid);
