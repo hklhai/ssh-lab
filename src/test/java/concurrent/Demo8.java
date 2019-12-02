@@ -3,6 +3,10 @@ package concurrent;
 import java.util.concurrent.TimeUnit;
 
 /**
+ * 脏读
+ * <p>
+ * 写加锁，读是否加锁同样需要考虑
+ * <p>
  * Created by Ocean lin on 2019/12/1.
  *
  * @author Ocean lin
