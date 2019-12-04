@@ -5,6 +5,10 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
+ * 单次调用属于原子操作
+ * <p>
+ * 但是多次调用不具备原子性
+ * <p>
  * Created by Ocean lin on 2019/12/1.
  *
  * @author Ocean lin

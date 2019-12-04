@@ -41,16 +41,16 @@ public class HeapSort {
         }
     }
 
-    private static void buildHeap(int[] a, int n) {
+    private static void buildHeap(int[] a) {
         int lastNode = a.length - 1;
-        int lastNodeParent = lastNode - 1 / 2;
+        int lastNodeParent = lastNode - 1 >> 1;
         for (int i = lastNodeParent; i >= 0; i--) {
             heapify(a, a.length, i);
         }
     }
 
     private static void heapSort(int[] a, int n) {
-        buildHeap(a, n);
+        buildHeap(a);
         // 最后一个节点触发
         for (int i = n - 1; i >= 0; i--) {
             int t = a[0];
@@ -81,10 +81,12 @@ public class HeapSort {
         if (c2 < n && a[max] < a[c2]) {
             max = c2;
         }
+        // 如果i是最大值不需要交换
         if (max != i) {
             int t = a[max];
             a[max] = a[i];
             a[i] = t;
+            // 是c1或c2的下标
             heapify(a, n, max);
         }
     }
