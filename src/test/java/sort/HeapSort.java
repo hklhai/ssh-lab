@@ -56,7 +56,7 @@ public class HeapSort {
             int t = a[0];
             a[0] = a[i];
             a[i] = t;
-            // 会做砍断，树的长度会减少，heapify的长度就是i的值
+            // 会做砍断，树的长度会减少，heapify的长度就是i的值;从堆顶开始heapify
             heapify(a, i, 0);
         }
     }
