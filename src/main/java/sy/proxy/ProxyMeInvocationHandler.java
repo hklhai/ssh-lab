@@ -1,8 +1,5 @@
 package sy.proxy;
 
-import cn.edu.ncut.service.ProxyService;
-
-import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
 /**
