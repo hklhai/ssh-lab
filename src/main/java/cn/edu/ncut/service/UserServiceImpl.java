@@ -11,7 +11,7 @@ import cn.edu.ncut.model.dto.MapDto;
 import cn.edu.ncut.model.view.VMap;
 import cn.edu.ncut.service.base.BaseServiceImpl;
 import com.google.gson.Gson;
-import lyj.participle.NlpirTest;
+import participle.NlpirTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;

@@ -1,7 +1,7 @@
 package cn.edu.ncut.test;
 
 import org.junit.Test;
-import sy.proxy.*;
+import study.proxy.*;
 
 /**
  * Created by Ocean Lin on 2017/4/30.

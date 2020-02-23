@@ -35,29 +35,29 @@
             </snapshots>
         </repository>
         <!--<repository>-->
-            <!--<id>Nexus</id>-->
-            <!--<name>Nexus Repository</name>-->
-            <!--<url>http://abbNexus.com:8081/nexus/content/groups/public/</url>-->
-            <!--<releases>-->
-                <!--<enabled>true</enabled>-->
-            <!--</releases>-->
-            <!--<snapshots>-->
-                <!--<enabled>true</enabled>-->
-            <!--</snapshots>-->
+        <!--<id>Nexus</id>-->
+        <!--<name>Nexus Repository</name>-->
+        <!--<url>http://abbNexus.com:8081/nexus/content/groups/public/</url>-->
+        <!--<releases>-->
+        <!--<enabled>true</enabled>-->
+        <!--</releases>-->
+        <!--<snapshots>-->
+        <!--<enabled>true</enabled>-->
+        <!--</snapshots>-->
         <!--</repository>-->
     </repositories>
 
     <!--<distributionManagement>-->
-        <!--<repository>-->
-            <!--<id>abbRelease</id>-->
-            <!--<name>Abb Project Release</name>-->
-            <!--<url>http://abbNexus.com:8081/nexus/content/repositories/releases/</url>-->
-        <!--</repository>-->
-        <!--<snapshotRepository>-->
-            <!--<id>abbSnapshot</id>-->
-            <!--<name>Abb Project Snapshot</name>-->
-            <!--<url>http://abbNexus.com:8081/nexus/content/repositories/snapshots/</url>-->
-        <!--</snapshotRepository>-->
+    <!--<repository>-->
+    <!--<id>abbRelease</id>-->
+    <!--<name>Abb Project Release</name>-->
+    <!--<url>http://abbNexus.com:8081/nexus/content/repositories/releases/</url>-->
+    <!--</repository>-->
+    <!--<snapshotRepository>-->
+    <!--<id>abbSnapshot</id>-->
+    <!--<name>Abb Project Snapshot</name>-->
+    <!--<url>http://abbNexus.com:8081/nexus/content/repositories/snapshots/</url>-->
+    <!--</snapshotRepository>-->
     <!--</distributionManagement>-->
 
 
@@ -540,24 +540,24 @@
         </dependency>
         <!-- jsoup  -->
         <!--<dependency>-->
-            <!--<groupId>org.jsoup</groupId>-->
-            <!--<artifactId>jsoup</artifactId>-->
-            <!--<version>1.9.2</version>-->
+        <!--<groupId>org.jsoup</groupId>-->
+        <!--<artifactId>jsoup</artifactId>-->
+        <!--<version>1.9.2</version>-->
         <!--</dependency>-->
         <!--<dependency>-->
-            <!--<groupId>com.rapid</groupId>-->
-            <!--<artifactId>com-rapid</artifactId>-->
-            <!--<version>1.0</version>-->
+        <!--<groupId>com.rapid</groupId>-->
+        <!--<artifactId>com-rapid</artifactId>-->
+        <!--<version>1.0</version>-->
         <!--</dependency>-->
         <!--<dependency>-->
-            <!--<groupId>com.jousp</groupId>-->
-            <!--<artifactId>jsoup</artifactId>-->
-            <!--<version>1.0</version>-->
+        <!--<groupId>com.jousp</groupId>-->
+        <!--<artifactId>jsoup</artifactId>-->
+        <!--<version>1.0</version>-->
         <!--</dependency>-->
         <!--<dependency>-->
-            <!--<groupId>com.json</groupId>-->
-            <!--<artifactId>jsonlib</artifactId>-->
-            <!--<version>1.1</version>-->
+        <!--<groupId>com.json</groupId>-->
+        <!--<artifactId>jsonlib</artifactId>-->
+        <!--<version>1.1</version>-->
         <!--</dependency>-->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -580,7 +580,11 @@
             <artifactId>disruptor</artifactId>
             <version>3.3.2</version>
         </dependency>
-
+        <dependency>
+            <groupId>dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>1.6.1</version>
+        </dependency>
 
     </dependencies>
     <build>
