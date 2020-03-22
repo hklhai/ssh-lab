@@ -10,7 +10,7 @@ import java.io.IOException;
  */
 public class FileOperator {
 
-    private final static String filepath = "E:\\Spring 源码\\01.并发专题(一)";
+    private final static String filepath = "E:\\鲁班";
     private final static String ugly = "【巨菜站 www.jucaizhan.com】";
     private final static String normal = "";
 

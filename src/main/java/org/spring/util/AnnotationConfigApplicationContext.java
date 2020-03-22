@@ -21,7 +21,7 @@ public class AnnotationConfigApplicationContext {
             try {
 
                 Class clazz = Class.forName(basePackage + "." + name);
-                //判斷是否是屬於@servi@xxxx
+                // 判斷是否属于@servi@xxxx
                 if (clazz.isAnnotationPresent(MyService.class)) {
                     MyService luban = (MyService) clazz.getAnnotation(MyService.class);
                     System.out.println(luban.value());
