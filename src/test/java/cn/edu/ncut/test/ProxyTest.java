@@ -6,8 +6,6 @@ import cn.edu.ncut.service.ProxyServiceImpl;
 import org.junit.Test;
 import sun.misc.ProxyGenerator;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.lang.reflect.Proxy;
 
 /**
@@ -34,8 +32,7 @@ public class ProxyTest {
     }
 
 
-    private void generateProxyClass()
-    {
+    private void generateProxyClass() {
         byte[] proxy0s = ProxyGenerator.generateProxyClass("$Proxy0", new Class<?>[]{ProxyService.class});
         try {
             //FileOutputStream fileOutputStream = new FileOutputStream("$Proxy0.java");
@@ -45,6 +42,32 @@ public class ProxyTest {
         }
         System.out.println("write success!");
 
+    }
+
+
+    @Test
+    public void testStr() {
+        String s = "互联网服务事业部-网校事业部-学习服务部-服务运营部-初中理科";
+
+
+        String[]  str = new String[] {"互联网服务事业部-网校事业部-学习服务部-服务运营部-初中理科",
+                "互联网服务事业部-网校事业部-学习服务部",
+                "互联网服务事业部-网校事业部-学习服务部",
+                "互联网服务事业部-网校事业部",
+                "互联网服务事业部-网校事业部-学习服务部-服务运营部",
+                "互联网服务事业部-网校事业部-学习服务部-服务运营部-初中理科-AAA"
+        };
+        for (int i = 0; i < str.length; i++) {
+            getLastStrByLine(str[i]);
+        }
+
+
+    }
+
+    private String getLastStrByLine(String s) {
+        String[] split = s.split("-");
+        System.out.println(split[split.length - 1]);
+        return split[split.length - 1];
     }
 
 
