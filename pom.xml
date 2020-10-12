@@ -15,7 +15,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
         <argLine>-Dfile.encoding=UTF-8</argLine>
-        <junit.version>4.10</junit.version>
+        <junit.version>4.13.1</junit.version>
         <spring.version>5.0.10.RELEASE</spring.version>
         <hibnate.version>5.1.0.Final</hibnate.version>
         <cxf.version>3.1.6</cxf.version>
